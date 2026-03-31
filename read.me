@@ -1,0 +1,42 @@
+project/
+├── manage.py
+├── config/                  # Djangoプロジェクト設定
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── apps/
+│   ├── products/            # 商品機能
+│   │   ├── __init__.py
+│   │   ├── models.py        # ← fat model
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── admin.py
+│   │   ├── templates/
+│   │   │   └── products/
+│   │   │       ├── list.html
+│   │   │       └── detail.html
+│   │   └── migrations/
+│   │
+│   ├── accounts/            # 認証
+│   │   ├── __init__.py
+│   │   ├── models.py        # ← fat model（必要なら）
+│   │   ├── views.py         # ログイン処理
+│   │   ├── urls.py
+│   │   ├── templates/
+│   │   │   └── accounts/
+│   │   │       └── login.html
+│   │   └── migrations/
+│   │
+│   ├── orders/              # 購入
+│   │   ├── __init__.py
+│   │   ├── models.py        # ← 購入ロジックもここに寄せる
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── templates/
+│   │   │   └── orders/
+│   │   └── migrations/
+│
+└── db.sqlite3
